@@ -1,0 +1,2021 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="2/24/2021 12:05:35 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="OCLAYTON02100"
+  DTS:CreatorName="BROE\mandres"
+  DTS:DTSID="{AF524AE5-90A4-4330-B0B0-E7AABF2E81FC}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.93"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:ProtectionLevel="2"
+  DTS:VersionBuild="34"
+  DTS:VersionGUID="{EA83E3A8-A0FA-44C9-8EDF-BAFCA3BBBC6A}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[NetSuite Connection Manager]"
+      DTS:CreationName="NetSuite (KingswaySoft)"
+      DTS:DTSID="{54645D4C-1C20-4217-ACFB-E59D846FBF95}"
+      DTS:ObjectName="NetSuite Connection Manager">
+      <DTS:ObjectData>
+        <ConnectionManager
+          ConnectionString="ServerUrl=https://webservices.netsuite.com/services;EmailAddress=;AccountId=1125535;ConsumerKey=0e374efe63be8387e9256a645297b560dd56a269742ada454ace315109512927;TokenId=e26b7ea9de8987326ea3674fb2f105cd0d1b822854d6641a26fb7b3a1d3dc790;RoleId=;ApplicationId=;UserTimezone=&quot;Mountain Standard Time&quot;;Timeout=120;RetryOnIntermittentErrors=True;MaxConcurrentRequests=1;AuthenticationMode=Token;ProxyMode=NoProxy;ProxyUsername=;ProxyServer=;ProxyServerPort=0">
+          <EncryptedData
+            Type="http://www.w3.org/2001/04/xmlenc#Element"
+            Salt="/bnjcKF357w="
+            IV="YSDLt9eZLknZ7Ghne48VJQ==" xmlns="http://www.w3.org/2001/04/xmlenc#">
+            <EncryptionMethod
+              Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
+            <CipherData>
+              <CipherValue>YSDLt9eZLknZ7Ghne48VJSyZvaxE3AxVC0heTB2RGzNX71+i67VvbfyCKqOcUREkvyBrGdZJMnGHJMgEX8XvjQnyLHv4xdn5keICyxJajNkufWAGAKuOJ7HiazytBlN4kNQHd2wEaMuCLapBDf0IlHr0upR52XPll+yBYQEq8E3OEHXFFyCJ3QRpOj8jtjaluWrIJ6WEGplpv2DuBYzY1oG0xDXuko0hZ9baiayKBA4=</CipherValue>
+            </CipherData>
+          </EncryptedData>
+          <EncryptedData
+            Type="http://www.w3.org/2001/04/xmlenc#Element"
+            Salt="0gZ8s4wWDKI="
+            IV="gTJfMvK/lpzrEYG4QqDZ4w==" xmlns="http://www.w3.org/2001/04/xmlenc#">
+            <EncryptionMethod
+              Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
+            <CipherData>
+              <CipherValue>gTJfMvK/lpzrEYG4QqDZ4+Do3j/ih9Sz5+P/eQ31fh5uTgSf23bk2ZQNlep1JCQz/egtAz1+G7huGDgKB6N3VaA/1GqZ2jd2e1Ph3Hyt2j6qkSWLIga9GZIYcpn3IU0pkXeA7obmcbch8jiLm+T801H32j6N7YpUELsEUMW4ppfaAds9H/XAmQnYKBfDUv/DQKE1QhGiCcV8alwh1lBy+0fKwnsXtxE6tAKjwQG7y5s=</CipherValue>
+            </CipherData>
+          </EncryptedData>
+        </ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[omniDW]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{1B0C7FA6-A4CF-4605-BD4A-2366E8F26487}"
+      DTS:ObjectName="omniDW">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=devomni-dbs.database.windows.net;User ID=devomnidbuser;Initial Catalog=devOmniDW;Provider=SQLNCLI11.1;Auto Translate=False;">
+          <EncryptedData
+            Type="http://www.w3.org/2001/04/xmlenc#Element"
+            Salt="MYEEc1qcHAY="
+            IV="LAnB67Mr48s6PW7iHJr4lg==" xmlns="http://www.w3.org/2001/04/xmlenc#">
+            <EncryptionMethod
+              Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
+            <CipherData>
+              <CipherValue>LAnB67Mr48s6PW7iHJr4lvPhLHANREFJ8LiX7m7TmggN8XX8ktR2bhy16YUCW1KmnkTAGLfP4Lhz4Z81VtNwsUDVU0tDIJoLelHm0YPULFG0Ztp/RcsUj8MbsSsdlYIimVkRkxY0m48c42sxUDn3SaXC8hfsE8Auq4EOV3vbGhTjts/2DqnMoO/HTrzdlUeb</CipherValue>
+            </CipherData>
+          </EncryptedData>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{AAB36D92-E4D3-4D14-94E8-0B58143A23FB}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="DATEADD(&quot;d&quot;, -60, GETDATE() )"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="last60Days">
+      <DTS:VariableValue
+        DTS:DataType="7">1/21/2021 8:57:05 AM</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{A1FCA41B-C207-47A2-B118-0755C9D5FA60}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="SUBSTRING((DT_WSTR, 22)(DT_DBTIMESTAMP)@[User::last60Days], 1, 10) + &quot;T&quot; + SUBSTRING((DT_WSTR, 22)(DT_DBTIMESTAMP)@[User::last60Days], 12, 19)"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="last60DaysSTR">
+      <DTS:VariableValue
+        DTS:DataType="8">2021-01-21T08:57:05</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Netsuite Invoice"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{C360AB31-71C5-4AD8-AEDF-7FE5AC4B2C33}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Netsuite Invoice"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:PropertyExpression
+        DTS:Name="[NetSuite Source].[SearchQuery]">"&lt;?xml version=\"1.0\" encoding=\"utf-16\"?&gt;
+&lt;TransactionSearchBasic xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"&gt;
+  &lt;recordType operator=\"is\" xmlns=\"urn:common_2020_1.platform.webservices.netsuite.com\"&gt;
+    &lt;searchValue xmlns=\"urn:core_2020_1.platform.webservices.netsuite.com\"&gt;Invoice&lt;/searchValue&gt;
+  &lt;/recordType&gt;
+  &lt;dueDate operator=\"after\" xmlns=\"urn:common_2020_1.platform.webservices.netsuite.com\"&gt;
+    &lt;searchValue xmlns=\"urn:core_2020_1.platform.webservices.netsuite.com\"&gt;"+ @[User::last60DaysSTR] +"&lt;/searchValue&gt;
+  &lt;/dueDate&gt;
+&lt;/TransactionSearchBasic&gt;"</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Netsuite Invoice\NetSuite Source"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="KingswaySoft Inc.; http://www.kingswaysoft.com; support@kingswaysoft.com; Copyright (c) 2020 KingswaySoft Inc."
+              description="Extract data from NetSuite."
+              name="NetSuite Source"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specify the NetSuite objects to be used in the query statement"
+                  expressionType="Notify"
+                  name="SourceObject">Transaction - Invoice</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines if returned columns of advanced search should be overriden."
+                  expressionType="Notify"
+                  name="Override Search Columns">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the maximum number of results to be returned per request."
+                  expressionType="Notify"
+                  name="BatchSize">500</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Only return the first page of results."
+                  expressionType="Notify"
+                  name="RetrieveFirstPageOnly">false</property>
+                <property
+                  dataType="System.String"
+                  description="The search query that will be used to retrieve data."
+                  expressionType="Notify"
+                  name="SearchQuery">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;TransactionSearchBasic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;recordType operator="is" xmlns="urn:common_2020_1.platform.webservices.netsuite.com"&gt;
+    &lt;searchValue xmlns="urn:core_2020_1.platform.webservices.netsuite.com"&gt;Invoice&lt;/searchValue&gt;
+  &lt;/recordType&gt;
+  &lt;dueDate operator="after" xmlns="urn:common_2020_1.platform.webservices.netsuite.com"&gt;
+    &lt;searchValue xmlns="urn:core_2020_1.platform.webservices.netsuite.com"&gt;2021-01-21T08:57:05&lt;/searchValue&gt;
+  &lt;/dueDate&gt;
+&lt;/TransactionSearchBasic&gt;</property>
+                <property
+                  dataType="System.String"
+                  description="The name of the saved search that will be used to retrieve data."
+                  expressionType="Notify"
+                  name="SavedSearchName"></property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines if we should get records that have been deleted."
+                  expressionType="Notify"
+                  name="GetDeletedRecords">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determines if scripts should be run and triggers should be executed after writing data."
+                  expressionType="Notify"
+                  name="RunSuiteScriptAndWorkflowTriggers"
+                  typeConverter="KingswaySoft.IntegrationToolkit.NetSuite.RunSuiteScriptAndTriggers, KingswaySoft.IntegrationToolkit.NetSuite, Version=1.0.2017.0, Culture=neutral, PublicKeyToken=705df8e0751bcea7">0</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">KingswaySoft.IntegrationToolkit.NetSuite.NetSuiteSourceComponent</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Netsuite Invoice\NetSuite Source.Connections[NetSuite (KingswaySoft)]"
+                  connectionManagerID="Package.ConnectionManagers[NetSuite Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[NetSuite Connection Manager]"
+                  description="NetSuite"
+                  name="NetSuite (KingswaySoft)" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output]"
+                  name="Primary Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].Columns[amountPaid]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[amountPaid]"
+                      lineageId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].Columns[amountPaid]"
+                      name="amountPaid"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].Columns[amountRemaining]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[amountRemaining]"
+                      lineageId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].Columns[amountRemaining]"
+                      name="amountRemaining"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].Columns[balance]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[balance]"
+                      lineageId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].Columns[balance]"
+                      name="balance"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].Columns[tranDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[tranDate]"
+                      lineageId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].Columns[tranDate]"
+                      name="tranDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].Columns[tranId]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[tranId]"
+                      length="255"
+                      lineageId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].Columns[tranId]"
+                      name="tranId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].Columns[status]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[status]"
+                      length="255"
+                      lineageId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].Columns[status]"
+                      name="status"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].Columns[class.name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[class.name]"
+                      length="255"
+                      lineageId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].Columns[class.name]"
+                      name="class.name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].Columns[department.name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[department.name]"
+                      length="255"
+                      lineageId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].Columns[department.name]"
+                      name="department.name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].Columns[entity.name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[entity.name]"
+                      length="255"
+                      lineageId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].Columns[entity.name]"
+                      name="entity.name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].Columns[memo]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[memo]"
+                      length="255"
+                      lineageId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].Columns[memo]"
+                      name="memo"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].Columns[subTotal]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[subTotal]"
+                      lineageId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].Columns[subTotal]"
+                      name="subTotal"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].Columns[total]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[total]"
+                      lineageId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].Columns[total]"
+                      name="total"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].Columns[dueDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[dueDate]"
+                      lineageId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].Columns[dueDate]"
+                      name="dueDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].Columns[internalId]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[internalId]"
+                      length="255"
+                      lineageId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].Columns[internalId]"
+                      name="internalId"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[account.externalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="account.externalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[account.internalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="account.internalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[account.name]"
+                      dataType="wstr"
+                      length="255"
+                      name="account.name" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[account.type]"
+                      dataType="wstr"
+                      length="255"
+                      name="account.type" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[altHandlingCost]"
+                      dataType="r8"
+                      name="altHandlingCost" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[altShippingCost]"
+                      dataType="r8"
+                      name="altShippingCost" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[amountPaid]"
+                      dataType="r8"
+                      name="amountPaid" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[amountRemaining]"
+                      dataType="r8"
+                      name="amountRemaining" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[approvalStatus.externalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="approvalStatus.externalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[approvalStatus.internalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="approvalStatus.internalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[approvalStatus.name]"
+                      dataType="wstr"
+                      length="255"
+                      name="approvalStatus.name" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[approvalStatus.type]"
+                      dataType="wstr"
+                      length="255"
+                      name="approvalStatus.type" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[balance]"
+                      dataType="r8"
+                      name="balance" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[billingAccount.externalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="billingAccount.externalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[billingAccount.internalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="billingAccount.internalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[billingAccount.name]"
+                      dataType="wstr"
+                      length="255"
+                      name="billingAccount.name" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[billingAccount.type]"
+                      dataType="wstr"
+                      length="255"
+                      name="billingAccount.type" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[billingAddress.addr1]"
+                      dataType="wstr"
+                      length="255"
+                      name="billingAddress.addr1" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[billingAddress.addr2]"
+                      dataType="wstr"
+                      length="255"
+                      name="billingAddress.addr2" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[billingAddress.addr3]"
+                      dataType="wstr"
+                      length="255"
+                      name="billingAddress.addr3" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[billingAddress.addressee]"
+                      dataType="wstr"
+                      length="255"
+                      name="billingAddress.addressee" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[billingAddress.addrPhone]"
+                      dataType="wstr"
+                      length="255"
+                      name="billingAddress.addrPhone" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[billingAddress.addrText]"
+                      dataType="wstr"
+                      length="255"
+                      name="billingAddress.addrText" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[billingAddress.attention]"
+                      dataType="wstr"
+                      length="255"
+                      name="billingAddress.attention" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[billingAddress.city]"
+                      dataType="wstr"
+                      length="255"
+                      name="billingAddress.city" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[billingAddress.country]"
+                      dataType="wstr"
+                      length="255"
+                      name="billingAddress.country" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[billingAddress.internalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="billingAddress.internalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[billingAddress.override]"
+                      dataType="bool"
+                      name="billingAddress.override" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[billingAddress.state]"
+                      dataType="wstr"
+                      length="255"
+                      name="billingAddress.state" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[billingAddress.zip]"
+                      dataType="wstr"
+                      length="255"
+                      name="billingAddress.zip" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[billingSchedule.externalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="billingSchedule.externalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[billingSchedule.internalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="billingSchedule.internalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[billingSchedule.name]"
+                      dataType="wstr"
+                      length="255"
+                      name="billingSchedule.name" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[billingSchedule.type]"
+                      dataType="wstr"
+                      length="255"
+                      name="billingSchedule.type" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[canHaveStackable]"
+                      dataType="bool"
+                      name="canHaveStackable" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[class.externalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="class.externalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[class.internalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="class.internalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[class.name]"
+                      dataType="wstr"
+                      length="255"
+                      name="class.name" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[class.type]"
+                      dataType="wstr"
+                      length="255"
+                      name="class.type" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[contribPct]"
+                      dataType="wstr"
+                      length="255"
+                      name="contribPct" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[createdDate]"
+                      dataType="dbTimeStamp"
+                      name="createdDate" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[createdFrom.externalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="createdFrom.externalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[createdFrom.internalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="createdFrom.internalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[createdFrom.name]"
+                      dataType="wstr"
+                      length="255"
+                      name="createdFrom.name" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[createdFrom.type]"
+                      dataType="wstr"
+                      length="255"
+                      name="createdFrom.type" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[currency.externalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="currency.externalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[currency.internalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="currency.internalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[currency.name]"
+                      dataType="wstr"
+                      length="255"
+                      name="currency.name" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[currency.type]"
+                      dataType="wstr"
+                      length="255"
+                      name="currency.type" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[currencyName]"
+                      dataType="wstr"
+                      length="255"
+                      name="currencyName" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[customForm.externalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="customForm.externalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[customForm.internalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="customForm.internalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[customForm.name]"
+                      dataType="wstr"
+                      length="255"
+                      name="customForm.name" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[customForm.type]"
+                      dataType="wstr"
+                      length="255"
+                      name="customForm.type" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[deferredRevenue]"
+                      dataType="r8"
+                      name="deferredRevenue" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[department.externalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="department.externalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[department.internalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="department.internalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[department.name]"
+                      dataType="wstr"
+                      length="255"
+                      name="department.name" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[department.type]"
+                      dataType="wstr"
+                      length="255"
+                      name="department.type" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[discountAmount]"
+                      dataType="r8"
+                      name="discountAmount" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[discountDate]"
+                      dataType="dbTimeStamp"
+                      name="discountDate" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[discountItem.externalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="discountItem.externalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[discountItem.internalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="discountItem.internalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[discountItem.name]"
+                      dataType="wstr"
+                      length="255"
+                      name="discountItem.name" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[discountItem.type]"
+                      dataType="wstr"
+                      length="255"
+                      name="discountItem.type" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[discountRate]"
+                      dataType="wstr"
+                      length="255"
+                      name="discountRate" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[discountTotal]"
+                      dataType="r8"
+                      name="discountTotal" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[dueDate]"
+                      dataType="dbTimeStamp"
+                      name="dueDate" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[email]"
+                      dataType="wstr"
+                      length="255"
+                      name="email" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[endDate]"
+                      dataType="dbTimeStamp"
+                      name="endDate" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[entity.externalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="entity.externalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[entity.internalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="entity.internalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[entity.name]"
+                      dataType="wstr"
+                      length="255"
+                      name="entity.name" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[entity.type]"
+                      dataType="wstr"
+                      length="255"
+                      name="entity.type" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[entityTaxRegNum.externalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="entityTaxRegNum.externalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[entityTaxRegNum.internalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="entityTaxRegNum.internalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[entityTaxRegNum.name]"
+                      dataType="wstr"
+                      length="255"
+                      name="entityTaxRegNum.name" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[entityTaxRegNum.type]"
+                      dataType="wstr"
+                      length="255"
+                      name="entityTaxRegNum.type" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[estGrossProfit]"
+                      dataType="r8"
+                      name="estGrossProfit" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[estGrossProfitPercent]"
+                      dataType="r8"
+                      name="estGrossProfitPercent" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[exchangeRate]"
+                      dataType="r8"
+                      name="exchangeRate" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[excludeCommission]"
+                      dataType="bool"
+                      name="excludeCommission" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[expCostDiscAmount]"
+                      dataType="r8"
+                      name="expCostDiscAmount" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[expCostDiscount.externalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="expCostDiscount.externalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[expCostDiscount.internalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="expCostDiscount.internalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[expCostDiscount.name]"
+                      dataType="wstr"
+                      length="255"
+                      name="expCostDiscount.name" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[expCostDiscount.type]"
+                      dataType="wstr"
+                      length="255"
+                      name="expCostDiscount.type" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[expCostDiscPrint]"
+                      dataType="bool"
+                      name="expCostDiscPrint" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[expCostDiscRate]"
+                      dataType="wstr"
+                      length="255"
+                      name="expCostDiscRate" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[expCostDiscTax1Amt]"
+                      dataType="r8"
+                      name="expCostDiscTax1Amt" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[expCostDiscTaxable]"
+                      dataType="bool"
+                      name="expCostDiscTaxable" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[expCostTaxCode.externalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="expCostTaxCode.externalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[expCostTaxCode.internalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="expCostTaxCode.internalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[expCostTaxCode.name]"
+                      dataType="wstr"
+                      length="255"
+                      name="expCostTaxCode.name" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[expCostTaxCode.type]"
+                      dataType="wstr"
+                      length="255"
+                      name="expCostTaxCode.type" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[expCostTaxRate1]"
+                      dataType="r8"
+                      name="expCostTaxRate1" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[expCostTaxRate2]"
+                      dataType="r8"
+                      name="expCostTaxRate2" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[externalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="externalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[fax]"
+                      dataType="wstr"
+                      length="255"
+                      name="fax" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[fob]"
+                      dataType="wstr"
+                      length="255"
+                      name="fob" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[giftCertApplied]"
+                      dataType="r8"
+                      name="giftCertApplied" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[handlingCost]"
+                      dataType="r8"
+                      name="handlingCost" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[handlingTax1Rate]"
+                      dataType="r8"
+                      name="handlingTax1Rate" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[handlingTax2Rate]"
+                      dataType="wstr"
+                      length="255"
+                      name="handlingTax2Rate" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[handlingTaxCode.externalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="handlingTaxCode.externalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[handlingTaxCode.internalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="handlingTaxCode.internalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[handlingTaxCode.name]"
+                      dataType="wstr"
+                      length="255"
+                      name="handlingTaxCode.name" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[handlingTaxCode.type]"
+                      dataType="wstr"
+                      length="255"
+                      name="handlingTaxCode.type" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[internalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="internalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[isTaxable]"
+                      dataType="bool"
+                      name="isTaxable" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[itemCostDiscAmount]"
+                      dataType="r8"
+                      name="itemCostDiscAmount" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[itemCostDiscount.externalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="itemCostDiscount.externalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[itemCostDiscount.internalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="itemCostDiscount.internalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[itemCostDiscount.name]"
+                      dataType="wstr"
+                      length="255"
+                      name="itemCostDiscount.name" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[itemCostDiscount.type]"
+                      dataType="wstr"
+                      length="255"
+                      name="itemCostDiscount.type" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[itemCostDiscPrint]"
+                      dataType="bool"
+                      name="itemCostDiscPrint" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[itemCostDiscRate]"
+                      dataType="wstr"
+                      length="255"
+                      name="itemCostDiscRate" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[itemCostDiscTax1Amt]"
+                      dataType="r8"
+                      name="itemCostDiscTax1Amt" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[itemCostDiscTaxable]"
+                      dataType="bool"
+                      name="itemCostDiscTaxable" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[itemCostTaxCode.externalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="itemCostTaxCode.externalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[itemCostTaxCode.internalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="itemCostTaxCode.internalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[itemCostTaxCode.name]"
+                      dataType="wstr"
+                      length="255"
+                      name="itemCostTaxCode.name" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[itemCostTaxCode.type]"
+                      dataType="wstr"
+                      length="255"
+                      name="itemCostTaxCode.type" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[itemCostTaxRate1]"
+                      dataType="r8"
+                      name="itemCostTaxRate1" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[itemCostTaxRate2]"
+                      dataType="r8"
+                      name="itemCostTaxRate2" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[job.externalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="job.externalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[job.internalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="job.internalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[job.name]"
+                      dataType="wstr"
+                      length="255"
+                      name="job.name" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[job.type]"
+                      dataType="wstr"
+                      length="255"
+                      name="job.type" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[lastModifiedDate]"
+                      dataType="dbTimeStamp"
+                      name="lastModifiedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[leadSource.externalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="leadSource.externalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[leadSource.internalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="leadSource.internalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[leadSource.name]"
+                      dataType="wstr"
+                      length="255"
+                      name="leadSource.name" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[leadSource.type]"
+                      dataType="wstr"
+                      length="255"
+                      name="leadSource.type" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[linkedTrackingNumbers]"
+                      dataType="wstr"
+                      length="255"
+                      name="linkedTrackingNumbers" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[location.externalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="location.externalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[location.internalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="location.internalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[location.name]"
+                      dataType="wstr"
+                      length="255"
+                      name="location.name" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[location.type]"
+                      dataType="wstr"
+                      length="255"
+                      name="location.type" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[memo]"
+                      dataType="wstr"
+                      length="255"
+                      name="memo" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[message]"
+                      dataType="wstr"
+                      length="255"
+                      name="message" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[messageSel.externalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="messageSel.externalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[messageSel.internalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="messageSel.internalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[messageSel.name]"
+                      dataType="wstr"
+                      length="255"
+                      name="messageSel.name" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[messageSel.type]"
+                      dataType="wstr"
+                      length="255"
+                      name="messageSel.type" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[nextApprover.externalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="nextApprover.externalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[nextApprover.internalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="nextApprover.internalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[nextApprover.name]"
+                      dataType="wstr"
+                      length="255"
+                      name="nextApprover.name" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[nextApprover.type]"
+                      dataType="wstr"
+                      length="255"
+                      name="nextApprover.type" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[nexus.externalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="nexus.externalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[nexus.internalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="nexus.internalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[nexus.name]"
+                      dataType="wstr"
+                      length="255"
+                      name="nexus.name" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[nexus.type]"
+                      dataType="wstr"
+                      length="255"
+                      name="nexus.type" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[onCreditHold]"
+                      dataType="wstr"
+                      length="255"
+                      name="onCreditHold" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[opportunity.externalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="opportunity.externalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[opportunity.internalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="opportunity.internalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[opportunity.name]"
+                      dataType="wstr"
+                      length="255"
+                      name="opportunity.name" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[opportunity.type]"
+                      dataType="wstr"
+                      length="255"
+                      name="opportunity.type" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[otherRefNum]"
+                      dataType="wstr"
+                      length="255"
+                      name="otherRefNum" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[partner.externalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="partner.externalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[partner.internalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="partner.internalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[partner.name]"
+                      dataType="wstr"
+                      length="255"
+                      name="partner.name" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[partner.type]"
+                      dataType="wstr"
+                      length="255"
+                      name="partner.type" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[postingPeriod.externalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="postingPeriod.externalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[postingPeriod.internalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="postingPeriod.internalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[postingPeriod.name]"
+                      dataType="wstr"
+                      length="255"
+                      name="postingPeriod.name" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[postingPeriod.type]"
+                      dataType="wstr"
+                      length="255"
+                      name="postingPeriod.type" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[promoCode.externalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="promoCode.externalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[promoCode.internalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="promoCode.internalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[promoCode.name]"
+                      dataType="wstr"
+                      length="255"
+                      name="promoCode.name" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[promoCode.type]"
+                      dataType="wstr"
+                      length="255"
+                      name="promoCode.type" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[recognizedRevenue]"
+                      dataType="r8"
+                      name="recognizedRevenue" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[recurringBill]"
+                      dataType="bool"
+                      name="recurringBill" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[revenueStatus]"
+                      dataType="wstr"
+                      length="255"
+                      name="revenueStatus" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[revRecEndDate]"
+                      dataType="dbTimeStamp"
+                      name="revRecEndDate" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[revRecOnRevCommitment]"
+                      dataType="bool"
+                      name="revRecOnRevCommitment" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[revRecSchedule.externalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="revRecSchedule.externalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[revRecSchedule.internalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="revRecSchedule.internalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[revRecSchedule.name]"
+                      dataType="wstr"
+                      length="255"
+                      name="revRecSchedule.name" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[revRecSchedule.type]"
+                      dataType="wstr"
+                      length="255"
+                      name="revRecSchedule.type" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[revRecStartDate]"
+                      dataType="dbTimeStamp"
+                      name="revRecStartDate" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[salesEffectiveDate]"
+                      dataType="dbTimeStamp"
+                      name="salesEffectiveDate" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[salesGroup.externalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="salesGroup.externalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[salesGroup.internalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="salesGroup.internalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[salesGroup.name]"
+                      dataType="wstr"
+                      length="255"
+                      name="salesGroup.name" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[salesGroup.type]"
+                      dataType="wstr"
+                      length="255"
+                      name="salesGroup.type" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[salesRep.externalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="salesRep.externalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[salesRep.internalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="salesRep.internalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[salesRep.name]"
+                      dataType="wstr"
+                      length="255"
+                      name="salesRep.name" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[salesRep.type]"
+                      dataType="wstr"
+                      length="255"
+                      name="salesRep.type" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[shipDate]"
+                      dataType="dbTimeStamp"
+                      name="shipDate" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[shipIsResidential]"
+                      dataType="bool"
+                      name="shipIsResidential" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[shipMethod.externalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="shipMethod.externalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[shipMethod.internalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="shipMethod.internalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[shipMethod.name]"
+                      dataType="wstr"
+                      length="255"
+                      name="shipMethod.name" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[shipMethod.type]"
+                      dataType="wstr"
+                      length="255"
+                      name="shipMethod.type" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[shippingAddress.addr1]"
+                      dataType="wstr"
+                      length="255"
+                      name="shippingAddress.addr1" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[shippingAddress.addr2]"
+                      dataType="wstr"
+                      length="255"
+                      name="shippingAddress.addr2" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[shippingAddress.addr3]"
+                      dataType="wstr"
+                      length="255"
+                      name="shippingAddress.addr3" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[shippingAddress.addressee]"
+                      dataType="wstr"
+                      length="255"
+                      name="shippingAddress.addressee" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[shippingAddress.addrPhone]"
+                      dataType="wstr"
+                      length="255"
+                      name="shippingAddress.addrPhone" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[shippingAddress.addrText]"
+                      dataType="wstr"
+                      length="255"
+                      name="shippingAddress.addrText" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[shippingAddress.attention]"
+                      dataType="wstr"
+                      length="255"
+                      name="shippingAddress.attention" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[shippingAddress.city]"
+                      dataType="wstr"
+                      length="255"
+                      name="shippingAddress.city" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[shippingAddress.country]"
+                      dataType="wstr"
+                      length="255"
+                      name="shippingAddress.country" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[shippingAddress.internalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="shippingAddress.internalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[shippingAddress.override]"
+                      dataType="bool"
+                      name="shippingAddress.override" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[shippingAddress.state]"
+                      dataType="wstr"
+                      length="255"
+                      name="shippingAddress.state" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[shippingAddress.zip]"
+                      dataType="wstr"
+                      length="255"
+                      name="shippingAddress.zip" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[shippingCost]"
+                      dataType="r8"
+                      name="shippingCost" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[shippingTax1Rate]"
+                      dataType="r8"
+                      name="shippingTax1Rate" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[shippingTax2Rate]"
+                      dataType="wstr"
+                      length="255"
+                      name="shippingTax2Rate" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[shippingTaxCode.externalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="shippingTaxCode.externalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[shippingTaxCode.internalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="shippingTaxCode.internalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[shippingTaxCode.name]"
+                      dataType="wstr"
+                      length="255"
+                      name="shippingTaxCode.name" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[shippingTaxCode.type]"
+                      dataType="wstr"
+                      length="255"
+                      name="shippingTaxCode.type" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[source]"
+                      dataType="wstr"
+                      length="255"
+                      name="source" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[startDate]"
+                      dataType="dbTimeStamp"
+                      name="startDate" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[status]"
+                      dataType="wstr"
+                      length="255"
+                      name="status" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[subsidiary.externalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="subsidiary.externalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[subsidiary.internalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="subsidiary.internalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[subsidiary.name]"
+                      dataType="wstr"
+                      length="255"
+                      name="subsidiary.name" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[subsidiary.type]"
+                      dataType="wstr"
+                      length="255"
+                      name="subsidiary.type" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[subsidiaryTaxRegNum.externalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="subsidiaryTaxRegNum.externalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[subsidiaryTaxRegNum.internalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="subsidiaryTaxRegNum.internalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[subsidiaryTaxRegNum.name]"
+                      dataType="wstr"
+                      length="255"
+                      name="subsidiaryTaxRegNum.name" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[subsidiaryTaxRegNum.type]"
+                      dataType="wstr"
+                      length="255"
+                      name="subsidiaryTaxRegNum.type" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[subTotal]"
+                      dataType="r8"
+                      name="subTotal" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[syncPartnerTeams]"
+                      dataType="bool"
+                      name="syncPartnerTeams" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[syncSalesTeams]"
+                      dataType="bool"
+                      name="syncSalesTeams" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[tax2Total]"
+                      dataType="r8"
+                      name="tax2Total" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[taxDetailsOverride]"
+                      dataType="bool"
+                      name="taxDetailsOverride" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[taxItem.externalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="taxItem.externalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[taxItem.internalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="taxItem.internalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[taxItem.name]"
+                      dataType="wstr"
+                      length="255"
+                      name="taxItem.name" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[taxItem.type]"
+                      dataType="wstr"
+                      length="255"
+                      name="taxItem.type" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[taxPointDate]"
+                      dataType="dbTimeStamp"
+                      name="taxPointDate" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[taxRate]"
+                      dataType="r8"
+                      name="taxRate" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[taxRegOverride]"
+                      dataType="bool"
+                      name="taxRegOverride" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[taxTotal]"
+                      dataType="r8"
+                      name="taxTotal" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[terms.externalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="terms.externalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[terms.internalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="terms.internalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[terms.name]"
+                      dataType="wstr"
+                      length="255"
+                      name="terms.name" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[terms.type]"
+                      dataType="wstr"
+                      length="255"
+                      name="terms.type" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[timeDiscAmount]"
+                      dataType="r8"
+                      name="timeDiscAmount" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[timeDiscount.externalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="timeDiscount.externalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[timeDiscount.internalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="timeDiscount.internalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[timeDiscount.name]"
+                      dataType="wstr"
+                      length="255"
+                      name="timeDiscount.name" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[timeDiscount.type]"
+                      dataType="wstr"
+                      length="255"
+                      name="timeDiscount.type" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[timeDiscPrint]"
+                      dataType="bool"
+                      name="timeDiscPrint" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[timeDiscRate]"
+                      dataType="wstr"
+                      length="255"
+                      name="timeDiscRate" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[timeDiscTax1Amt]"
+                      dataType="r8"
+                      name="timeDiscTax1Amt" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[timeDiscTaxable]"
+                      dataType="bool"
+                      name="timeDiscTaxable" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[timeTaxCode.externalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="timeTaxCode.externalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[timeTaxCode.internalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="timeTaxCode.internalId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[timeTaxCode.name]"
+                      dataType="wstr"
+                      length="255"
+                      name="timeTaxCode.name" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[timeTaxCode.type]"
+                      dataType="wstr"
+                      length="255"
+                      name="timeTaxCode.type" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[timeTaxRate1]"
+                      dataType="r8"
+                      name="timeTaxRate1" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[timeTaxRate2]"
+                      dataType="r8"
+                      name="timeTaxRate2" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[toBeEmailed]"
+                      dataType="bool"
+                      name="toBeEmailed" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[toBeFaxed]"
+                      dataType="bool"
+                      name="toBeFaxed" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[toBePrinted]"
+                      dataType="bool"
+                      name="toBePrinted" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[total]"
+                      dataType="r8"
+                      name="total" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[totalCostEstimate]"
+                      dataType="r8"
+                      name="totalCostEstimate" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[trackingNumbers]"
+                      dataType="wstr"
+                      length="255"
+                      name="trackingNumbers" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[tranDate]"
+                      dataType="dbTimeStamp"
+                      name="tranDate" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[tranId]"
+                      dataType="wstr"
+                      length="255"
+                      name="tranId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[tranIsVsoeBundle]"
+                      dataType="bool"
+                      name="tranIsVsoeBundle" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[vatRegNum]"
+                      dataType="wstr"
+                      length="255"
+                      name="vatRegNum" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].ExternalColumns[vsoeAutoCalc]"
+                      dataType="bool"
+                      name="vsoeAutoCalc" />
+                  </externalMetadataColumns>
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Netsuite Invoice\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[stg].[netsuite_Invoice]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Netsuite Invoice\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[omniDW]"
+                  connectionManagerRefId="Package.ConnectionManagers[omniDW]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Netsuite Invoice\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Netsuite Invoice\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[amountPaid]"
+                      cachedDataType="r8"
+                      cachedName="amountPaid"
+                      externalMetadataColumnId="Package\Netsuite Invoice\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[amountPaid]"
+                      lineageId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].Columns[amountPaid]" />
+                    <inputColumn
+                      refId="Package\Netsuite Invoice\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[amountRemaining]"
+                      cachedDataType="r8"
+                      cachedName="amountRemaining"
+                      externalMetadataColumnId="Package\Netsuite Invoice\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[amountRemaining]"
+                      lineageId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].Columns[amountRemaining]" />
+                    <inputColumn
+                      refId="Package\Netsuite Invoice\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[balance]"
+                      cachedDataType="r8"
+                      cachedName="balance"
+                      externalMetadataColumnId="Package\Netsuite Invoice\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[balance]"
+                      lineageId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].Columns[balance]" />
+                    <inputColumn
+                      refId="Package\Netsuite Invoice\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[tranDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="tranDate"
+                      externalMetadataColumnId="Package\Netsuite Invoice\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[tranDate]"
+                      lineageId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].Columns[tranDate]" />
+                    <inputColumn
+                      refId="Package\Netsuite Invoice\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[tranId]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="tranId"
+                      externalMetadataColumnId="Package\Netsuite Invoice\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[tranId]"
+                      lineageId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].Columns[tranId]" />
+                    <inputColumn
+                      refId="Package\Netsuite Invoice\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[status]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="status"
+                      externalMetadataColumnId="Package\Netsuite Invoice\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[status]"
+                      lineageId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].Columns[status]" />
+                    <inputColumn
+                      refId="Package\Netsuite Invoice\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[class.name]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="class.name"
+                      externalMetadataColumnId="Package\Netsuite Invoice\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[class.name]"
+                      lineageId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].Columns[class.name]" />
+                    <inputColumn
+                      refId="Package\Netsuite Invoice\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[department.name]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="department.name"
+                      externalMetadataColumnId="Package\Netsuite Invoice\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[department.name]"
+                      lineageId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].Columns[department.name]" />
+                    <inputColumn
+                      refId="Package\Netsuite Invoice\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[entity.name]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="entity.name"
+                      externalMetadataColumnId="Package\Netsuite Invoice\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[entity.name]"
+                      lineageId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].Columns[entity.name]" />
+                    <inputColumn
+                      refId="Package\Netsuite Invoice\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[memo]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="memo"
+                      externalMetadataColumnId="Package\Netsuite Invoice\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[memo]"
+                      lineageId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].Columns[memo]" />
+                    <inputColumn
+                      refId="Package\Netsuite Invoice\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[subTotal]"
+                      cachedDataType="r8"
+                      cachedName="subTotal"
+                      externalMetadataColumnId="Package\Netsuite Invoice\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[subTotal]"
+                      lineageId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].Columns[subTotal]" />
+                    <inputColumn
+                      refId="Package\Netsuite Invoice\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[total]"
+                      cachedDataType="r8"
+                      cachedName="total"
+                      externalMetadataColumnId="Package\Netsuite Invoice\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[total]"
+                      lineageId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].Columns[total]" />
+                    <inputColumn
+                      refId="Package\Netsuite Invoice\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[dueDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="dueDate"
+                      externalMetadataColumnId="Package\Netsuite Invoice\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[dueDate]"
+                      lineageId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].Columns[dueDate]" />
+                    <inputColumn
+                      refId="Package\Netsuite Invoice\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[internalId]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="internalId"
+                      externalMetadataColumnId="Package\Netsuite Invoice\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[internalId]"
+                      lineageId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output].Columns[internalId]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[amountPaid]"
+                      dataType="r8"
+                      name="amountPaid" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[amountRemaining]"
+                      dataType="r8"
+                      name="amountRemaining" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[balance]"
+                      dataType="r8"
+                      name="balance" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[tranDate]"
+                      dataType="dbTimeStamp"
+                      name="tranDate" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[tranId]"
+                      dataType="wstr"
+                      length="255"
+                      name="tranId" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[status]"
+                      dataType="wstr"
+                      length="255"
+                      name="status" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[class.name]"
+                      dataType="wstr"
+                      length="255"
+                      name="class.name" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[department.name]"
+                      dataType="wstr"
+                      length="255"
+                      name="department.name" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[entity.name]"
+                      dataType="wstr"
+                      length="255"
+                      name="entity.name" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[memo]"
+                      dataType="wstr"
+                      length="255"
+                      name="memo" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[subTotal]"
+                      dataType="r8"
+                      name="subTotal" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[total]"
+                      dataType="r8"
+                      name="total" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[dueDate]"
+                      dataType="dbTimeStamp"
+                      name="dueDate" />
+                    <externalMetadataColumn
+                      refId="Package\Netsuite Invoice\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[internalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="internalId" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Netsuite Invoice\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Netsuite Invoice\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Netsuite Invoice\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Netsuite Invoice\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Netsuite Invoice\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Netsuite Invoice\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Netsuite Invoice.Paths[Primary Output]"
+              endId="Package\Netsuite Invoice\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Primary Output"
+              startId="Package\Netsuite Invoice\NetSuite Source.Outputs[Primary Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Truncate Invoice"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{32699754-9AA3-442D-9F42-1E96CE86B479}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Truncate Invoice"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{1B0C7FA6-A4CF-4605-BD4A-2366E8F26487}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE stg.netsuite_Invoice" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{6D89C858-AC83-4AE9-BE34-6B876F378CD6}"
+      DTS:From="Package\Truncate Invoice"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Netsuite Invoice" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="157,42"
+          Id="Package\Netsuite Invoice"
+          TopLeft="36.5,107.5" />
+        <NodeLayout
+          Size="160,42"
+          Id="Package\Truncate Invoice"
+          TopLeft="35,5.5" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="115,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Netsuite Invoice">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="177,42"
+          Id="Package\Netsuite Invoice\OLE DB Destination"
+          TopLeft="81,167" />
+        <NodeLayout
+          Size="159,42"
+          Id="Package\Netsuite Invoice\NetSuite Source"
+          TopLeft="14.5,5.5" />
+        <EdgeLayout
+          Id="Package\Netsuite Invoice.Paths[Primary Output]"
+          TopLeft="94,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="75.5,119.5"
+              Start="0,0"
+              End="75.5,112">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,55.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,55.75"
+                    Point2="0,59.75"
+                    Point3="4,59.75" />
+                  <mssgle:LineSegment
+                    End="71.5,59.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="71.5,59.75"
+                    Point2="75.5,59.75"
+                    Point3="75.5,63.75" />
+                  <mssgle:LineSegment
+                    End="75.5,112" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Netsuite Invoice\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

@@ -1,0 +1,661 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="11/23/2020 8:54:04 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="OCLAYTON02100"
+  DTS:CreatorName="BROE\mandres"
+  DTS:DTSID="{5480C0B9-D25D-4931-925B-C3FCD1B5A5CC}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.93"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:ProtectionLevel="2"
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{9C052E7B-5F13-4146-AEFC-ADE992561620}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[NetSuite Connection Manager]"
+      DTS:CreationName="NetSuite (KingswaySoft)"
+      DTS:DTSID="{B1514ACF-675E-4590-A0C5-9D7A017CEB10}"
+      DTS:ObjectName="NetSuite Connection Manager">
+      <DTS:ObjectData>
+        <ConnectionManager
+          ConnectionString="ServerUrl=https://webservices.netsuite.com/services;EmailAddress=;AccountId=1125535;ConsumerKey=0e374efe63be8387e9256a645297b560dd56a269742ada454ace315109512927;TokenId=e26b7ea9de8987326ea3674fb2f105cd0d1b822854d6641a26fb7b3a1d3dc790;RoleId=;ApplicationId=;UserTimezone=&quot;Mountain Standard Time&quot;;Timeout=120;RetryOnIntermittentErrors=True;MaxConcurrentRequests=1;AuthenticationMode=Token;ProxyMode=NoProxy;ProxyUsername=;ProxyServer=;ProxyServerPort=0">
+          <EncryptedData
+            Type="http://www.w3.org/2001/04/xmlenc#Element"
+            Salt="qbWgF69Uxl4="
+            IV="UcvaXJhxIUH4rFEqSgpWyg==" xmlns="http://www.w3.org/2001/04/xmlenc#">
+            <EncryptionMethod
+              Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
+            <CipherData>
+              <CipherValue>UcvaXJhxIUH4rFEqSgpWyq21uRQ/w2JyeSTpnz2xWsl1Duv4+W5m65q5A2/7C+8f/fRVAPkjP1NH62ojdcqe2PM0sDB21kdCv1hvCy9tvSE0rimvv2EkCzt+AMg+cur77K/A8rECmUmM12YFJsgaLiSgcm0/7fW05AXA+vlkNZ1W6owWaih2oM54X3PG1PC+g+ggwWalUvN7h5i7hDxyN8mi2KzD8JwXXFWrRhBzKBQ=</CipherValue>
+            </CipherData>
+          </EncryptedData>
+          <EncryptedData
+            Type="http://www.w3.org/2001/04/xmlenc#Element"
+            Salt="UtQeJ0e4b9Q="
+            IV="0NLE2wTFpdVt3x6VdMcRSQ==" xmlns="http://www.w3.org/2001/04/xmlenc#">
+            <EncryptionMethod
+              Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
+            <CipherData>
+              <CipherValue>0NLE2wTFpdVt3x6VdMcRSeFVHifbb0SpqbULH+jxUECioEE+kXJra8qTZpYSmiNOLkVG3wzARoDag2/wReW889vAQku1HGzELO58vA+15FswtnLCsNViMBUqb1z4f6CJGFHWVeKqeGDks+NkVnw0SMJzaiYsp21rMJNO4nCUmxM22Z5eEuTu6rRDdQ6lbYzAlaST9kxjLINsQJLxBjn/3EG2MAxIH6AP4I/p44Wcc0E=</CipherValue>
+            </CipherData>
+          </EncryptedData>
+        </ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[omniDW]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{C85FE584-6225-4EE7-8ABE-45683EB6D811}"
+      DTS:ObjectName="omniDW">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=devomni-dbs.database.windows.net;User ID=devomnidbuser;Initial Catalog=devOmniDW;Provider=SQLNCLI11.1;Auto Translate=False;">
+          <EncryptedData
+            Type="http://www.w3.org/2001/04/xmlenc#Element"
+            Salt="0rffTCSaiLQ="
+            IV="988mj8GunnZQ5gp/UARR2g==" xmlns="http://www.w3.org/2001/04/xmlenc#">
+            <EncryptionMethod
+              Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
+            <CipherData>
+              <CipherValue>988mj8GunnZQ5gp/UARR2mzr4Av+oVMAblhH7Pe/CL6Id6pFR9Hk2T3YCs9uHcOX3yUNF9+gmGpe9FFa2ddcqsOaocNHJQ5mDeKreL5F3AZjTHK9MGLcD6JqSKU165GxEXUC7XXOeTVCS0bjCCWbgDIdFIbYnBVqIbLLExeaui/Z+2a5oY7n/idEYKy8OKGW</CipherValue>
+            </CipherData>
+          </EncryptedData>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task Classification"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{E9FE3A65-55CF-495D-AF7D-6E247AC16727}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task Classification"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task Classification\NetSuite Source"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="KingswaySoft Inc.; http://www.kingswaysoft.com; support@kingswaysoft.com; Copyright (c) 2020 KingswaySoft Inc."
+              description="Extract data from NetSuite."
+              name="NetSuite Source"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specify the NetSuite objects to be used in the query statement"
+                  expressionType="Notify"
+                  name="SourceObject">Classification</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines if returned columns of advanced search should be overriden."
+                  expressionType="Notify"
+                  name="Override Search Columns">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the maximum number of results to be returned per request."
+                  expressionType="Notify"
+                  name="BatchSize">500</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Only return the first page of results."
+                  expressionType="Notify"
+                  name="RetrieveFirstPageOnly">false</property>
+                <property
+                  dataType="System.String"
+                  description="The search query that will be used to retrieve data."
+                  expressionType="Notify"
+                  name="SearchQuery">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ClassificationSearchBasic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" /&gt;</property>
+                <property
+                  dataType="System.String"
+                  description="The name of the saved search that will be used to retrieve data."
+                  expressionType="Notify"
+                  name="SavedSearchName"></property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines if we should get records that have been deleted."
+                  expressionType="Notify"
+                  name="GetDeletedRecords">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determines if scripts should be run and triggers should be executed after writing data."
+                  expressionType="Notify"
+                  name="RunSuiteScriptAndWorkflowTriggers"
+                  typeConverter="KingswaySoft.IntegrationToolkit.NetSuite.RunSuiteScriptAndTriggers, KingswaySoft.IntegrationToolkit.NetSuite, Version=1.0.2017.0, Culture=neutral, PublicKeyToken=705df8e0751bcea7">0</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">KingswaySoft.IntegrationToolkit.NetSuite.NetSuiteSourceComponent</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task Classification\NetSuite Source.Connections[NetSuite (KingswaySoft)]"
+                  connectionManagerID="Package.ConnectionManagers[NetSuite Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[NetSuite Connection Manager]"
+                  description="NetSuite"
+                  name="NetSuite (KingswaySoft)" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task Classification\NetSuite Source.Outputs[Primary Output]"
+                  name="Primary Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task Classification\NetSuite Source.Outputs[Primary Output].Columns[externalId]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Classification\NetSuite Source.Outputs[Primary Output].ExternalColumns[externalId]"
+                      length="255"
+                      lineageId="Package\Data Flow Task Classification\NetSuite Source.Outputs[Primary Output].Columns[externalId]"
+                      name="externalId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Classification\NetSuite Source.Outputs[Primary Output].Columns[includeChildren]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Classification\NetSuite Source.Outputs[Primary Output].ExternalColumns[includeChildren]"
+                      lineageId="Package\Data Flow Task Classification\NetSuite Source.Outputs[Primary Output].Columns[includeChildren]"
+                      name="includeChildren"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Classification\NetSuite Source.Outputs[Primary Output].Columns[internalId]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Classification\NetSuite Source.Outputs[Primary Output].ExternalColumns[internalId]"
+                      length="255"
+                      lineageId="Package\Data Flow Task Classification\NetSuite Source.Outputs[Primary Output].Columns[internalId]"
+                      name="internalId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Classification\NetSuite Source.Outputs[Primary Output].Columns[isInactive]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Classification\NetSuite Source.Outputs[Primary Output].ExternalColumns[isInactive]"
+                      lineageId="Package\Data Flow Task Classification\NetSuite Source.Outputs[Primary Output].Columns[isInactive]"
+                      name="isInactive"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Classification\NetSuite Source.Outputs[Primary Output].Columns[name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Classification\NetSuite Source.Outputs[Primary Output].ExternalColumns[name]"
+                      length="255"
+                      lineageId="Package\Data Flow Task Classification\NetSuite Source.Outputs[Primary Output].Columns[name]"
+                      name="name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Classification\NetSuite Source.Outputs[Primary Output].Columns[parent.externalId]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Classification\NetSuite Source.Outputs[Primary Output].ExternalColumns[parent.externalId]"
+                      length="255"
+                      lineageId="Package\Data Flow Task Classification\NetSuite Source.Outputs[Primary Output].Columns[parent.externalId]"
+                      name="parent.externalId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Classification\NetSuite Source.Outputs[Primary Output].Columns[parent.internalId]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Classification\NetSuite Source.Outputs[Primary Output].ExternalColumns[parent.internalId]"
+                      length="255"
+                      lineageId="Package\Data Flow Task Classification\NetSuite Source.Outputs[Primary Output].Columns[parent.internalId]"
+                      name="parent.internalId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Classification\NetSuite Source.Outputs[Primary Output].Columns[parent.name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Classification\NetSuite Source.Outputs[Primary Output].ExternalColumns[parent.name]"
+                      length="255"
+                      lineageId="Package\Data Flow Task Classification\NetSuite Source.Outputs[Primary Output].Columns[parent.name]"
+                      name="parent.name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Classification\NetSuite Source.Outputs[Primary Output].Columns[parent.type]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Classification\NetSuite Source.Outputs[Primary Output].ExternalColumns[parent.type]"
+                      length="255"
+                      lineageId="Package\Data Flow Task Classification\NetSuite Source.Outputs[Primary Output].Columns[parent.type]"
+                      name="parent.type"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Classification\NetSuite Source.Outputs[Primary Output].ExternalColumns[externalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="externalId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Classification\NetSuite Source.Outputs[Primary Output].ExternalColumns[includeChildren]"
+                      dataType="bool"
+                      name="includeChildren" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Classification\NetSuite Source.Outputs[Primary Output].ExternalColumns[internalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="internalId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Classification\NetSuite Source.Outputs[Primary Output].ExternalColumns[isInactive]"
+                      dataType="bool"
+                      name="isInactive" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Classification\NetSuite Source.Outputs[Primary Output].ExternalColumns[name]"
+                      dataType="wstr"
+                      length="255"
+                      name="name" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Classification\NetSuite Source.Outputs[Primary Output].ExternalColumns[parent.externalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="parent.externalId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Classification\NetSuite Source.Outputs[Primary Output].ExternalColumns[parent.internalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="parent.internalId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Classification\NetSuite Source.Outputs[Primary Output].ExternalColumns[parent.name]"
+                      dataType="wstr"
+                      length="255"
+                      name="parent.name" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Classification\NetSuite Source.Outputs[Primary Output].ExternalColumns[parent.type]"
+                      dataType="wstr"
+                      length="255"
+                      name="parent.type" />
+                  </externalMetadataColumns>
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task Classification\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[stg].[netsuite_Classification]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task Classification\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[omniDW]"
+                  connectionManagerRefId="Package.ConnectionManagers[omniDW]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task Classification\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task Classification\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[externalId]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="externalId"
+                      externalMetadataColumnId="Package\Data Flow Task Classification\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[externalId]"
+                      lineageId="Package\Data Flow Task Classification\NetSuite Source.Outputs[Primary Output].Columns[externalId]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task Classification\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[includeChildren]"
+                      cachedDataType="bool"
+                      cachedName="includeChildren"
+                      externalMetadataColumnId="Package\Data Flow Task Classification\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[includeChildren]"
+                      lineageId="Package\Data Flow Task Classification\NetSuite Source.Outputs[Primary Output].Columns[includeChildren]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task Classification\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[internalId]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="internalId"
+                      externalMetadataColumnId="Package\Data Flow Task Classification\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[internalId]"
+                      lineageId="Package\Data Flow Task Classification\NetSuite Source.Outputs[Primary Output].Columns[internalId]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task Classification\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[isInactive]"
+                      cachedDataType="bool"
+                      cachedName="isInactive"
+                      externalMetadataColumnId="Package\Data Flow Task Classification\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[isInactive]"
+                      lineageId="Package\Data Flow Task Classification\NetSuite Source.Outputs[Primary Output].Columns[isInactive]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task Classification\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[name]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="name"
+                      externalMetadataColumnId="Package\Data Flow Task Classification\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[name]"
+                      lineageId="Package\Data Flow Task Classification\NetSuite Source.Outputs[Primary Output].Columns[name]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task Classification\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[parent.externalId]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="parent.externalId"
+                      externalMetadataColumnId="Package\Data Flow Task Classification\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[parent.externalId]"
+                      lineageId="Package\Data Flow Task Classification\NetSuite Source.Outputs[Primary Output].Columns[parent.externalId]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task Classification\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[parent.internalId]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="parent.internalId"
+                      externalMetadataColumnId="Package\Data Flow Task Classification\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[parent.internalId]"
+                      lineageId="Package\Data Flow Task Classification\NetSuite Source.Outputs[Primary Output].Columns[parent.internalId]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task Classification\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[parent.name]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="parent.name"
+                      externalMetadataColumnId="Package\Data Flow Task Classification\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[parent.name]"
+                      lineageId="Package\Data Flow Task Classification\NetSuite Source.Outputs[Primary Output].Columns[parent.name]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task Classification\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[parent.type]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="parent.type"
+                      externalMetadataColumnId="Package\Data Flow Task Classification\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[parent.type]"
+                      lineageId="Package\Data Flow Task Classification\NetSuite Source.Outputs[Primary Output].Columns[parent.type]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Classification\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[externalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="externalId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Classification\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[includeChildren]"
+                      dataType="bool"
+                      name="includeChildren" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Classification\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[internalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="internalId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Classification\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[isInactive]"
+                      dataType="bool"
+                      name="isInactive" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Classification\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[name]"
+                      dataType="wstr"
+                      length="255"
+                      name="name" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Classification\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[parent.externalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="parent.externalId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Classification\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[parent.internalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="parent.internalId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Classification\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[parent.name]"
+                      dataType="wstr"
+                      length="255"
+                      name="parent.name" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Classification\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[parent.type]"
+                      dataType="wstr"
+                      length="255"
+                      name="parent.type" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task Classification\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task Classification\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task Classification\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task Classification\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Classification\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task Classification\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task Classification.Paths[Primary Output]"
+              endId="Package\Data Flow Task Classification\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Primary Output"
+              startId="Package\Data Flow Task Classification\NetSuite Source.Outputs[Primary Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Truncate Table Classification"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{48884249-D53D-4E8A-8D54-03F3621698B1}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Truncate Table Classification"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{C85FE584-6225-4EE7-8ABE-45683EB6D811}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE stg.netsuite_Classification" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{F0341165-EF47-4B43-B93E-F8CDEB5EF59C}"
+      DTS:From="Package\Truncate Table Classification"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Data Flow Task Classification" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="223,42"
+          Id="Package\Data Flow Task Classification"
+          TopLeft="349,192" />
+        <NodeLayout
+          Size="221,42"
+          Id="Package\Truncate Table Classification"
+          TopLeft="95,150" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="316,171">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="33,42"
+              Start="0,0"
+              End="25.5,42">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="12.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="12.5,0"
+                    Point2="16.5,0"
+                    Point3="16.5,4" />
+                  <mssgle:LineSegment
+                    End="16.5,38" />
+                  <mssgle:CubicBezierSegment
+                    Point1="16.5,38"
+                    Point2="16.5,42"
+                    Point3="20.5,42" />
+                  <mssgle:LineSegment
+                    End="25.5,42" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task Classification">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="177,42"
+          Id="Package\Data Flow Task Classification\OLE DB Destination"
+          TopLeft="583,198" />
+        <NodeLayout
+          Size="159,42"
+          Id="Package\Data Flow Task Classification\NetSuite Source"
+          TopLeft="281,227" />
+        <EdgeLayout
+          Id="Package\Data Flow Task Classification.Paths[Primary Output]"
+          TopLeft="440,248">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="143,-29"
+              Start="0,0"
+              End="135.5,-29">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="67.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="67.5,0"
+                    Point2="71.5,0"
+                    Point3="71.5,-4" />
+                  <mssgle:LineSegment
+                    End="71.5,-25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="71.5,-25"
+                    Point2="71.5,-29"
+                    Point3="75.5,-29" />
+                  <mssgle:LineSegment
+                    End="135.5,-29" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task Classification\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
