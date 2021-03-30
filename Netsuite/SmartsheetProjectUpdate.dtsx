@@ -12,8 +12,8 @@
   DTS:ObjectName="SmartsheetProjectUpdate"
   DTS:PackageType="5"
   DTS:ProtectionLevel="2"
-  DTS:VersionBuild="119"
-  DTS:VersionGUID="{E17E35FF-69B6-44E1-94D0-D921BF537BB6}">
+  DTS:VersionBuild="120"
+  DTS:VersionGUID="{E6D127D7-57FB-46BF-B705-7245694481C1}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,22 +27,22 @@
           ConnectionString="ServerUrl=https://webservices.netsuite.com/services;EmailAddress=;AccountId=1125535;ConsumerKey=0e374efe63be8387e9256a645297b560dd56a269742ada454ace315109512927;TokenId=e26b7ea9de8987326ea3674fb2f105cd0d1b822854d6641a26fb7b3a1d3dc790;RoleId=;ApplicationId=;UserTimezone=&quot;Mountain Standard Time&quot;;Timeout=120;RetryOnIntermittentErrors=True;MaxConcurrentRequests=1;AuthenticationMode=Token;ProxyMode=NoProxy;ProxyUsername=;ProxyServer=;ProxyServerPort=0">
           <EncryptedData
             Type="http://www.w3.org/2001/04/xmlenc#Element"
-            Salt="BxtyCSzS3r0="
-            IV="obWOAIZicbH3PnNm/QtCnw==" xmlns="http://www.w3.org/2001/04/xmlenc#">
+            Salt="zX6Y5p3OWPA="
+            IV="FGDZh9YDvukbOufjaECydg==" xmlns="http://www.w3.org/2001/04/xmlenc#">
             <EncryptionMethod
               Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
             <CipherData>
-              <CipherValue>obWOAIZicbH3PnNm/QtCnxi7+7n3lXoR5YqT9xH9KO6Aq9s6PhnDPhZMZoFkqqEB746vh7Pz7JqYzkmzlIT4MMFhJ+rbgjQzBmRNHg+bd4kOuBePTB1u6RHJSeT4iiA9Hv8aMAcUT55CpDxIjUQW0GrFIY5Rncdr9hL4cT24+BI4+uJiEsolsNFPLhMxLgsda3EkbQ45FT+5M29hciMFPjoW79MoaKNw631nkR7KTYY=</CipherValue>
+              <CipherValue>FGDZh9YDvukbOufjaECydte3HRwlrt9GPDZDm/6h1cOro+B10wLsa99qwMokXJYlwmo+RMHRA8ZeTHhiuWZvQkM0BQv7izQQeo+AcEcTINonk7t003x+5ZnanLyZJzWrllxTzegsmxsHTT/sYBjB3NhjY2UwQfDFqA/8Ey8IKQGR+6klW6T1STOMfV2jEY31m0i1+JiyLAtXTnvorrFrip+Itc8QoF0fFTo9udrHygA=</CipherValue>
             </CipherData>
           </EncryptedData>
           <EncryptedData
             Type="http://www.w3.org/2001/04/xmlenc#Element"
-            Salt="qJP3lqXtsvc="
-            IV="yP5hs+3G3IVhYXMN9p/pgw==" xmlns="http://www.w3.org/2001/04/xmlenc#">
+            Salt="B19jzTaauK8="
+            IV="SVbyMZ8+N3YoWmlTiXBRgw==" xmlns="http://www.w3.org/2001/04/xmlenc#">
             <EncryptionMethod
               Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
             <CipherData>
-              <CipherValue>yP5hs+3G3IVhYXMN9p/pg0tqYK88PL+eGTaB2KbK+UBZ28CDSI5vJaLfOYd1RDebTDzGT4au84tnBPrW+YnjxIlPsPXeHKnDz423KuAOwZ1YzgguCJ9mDS0UMxlv2olwZ0yM0ex90lKunkd7yJpsaqDuPPHfiG93utUAStN86ZphkwPJZzvt3+GTQyaQnibKDdCGqmEskT09WHkOBBeXqp6Ek5q7f6DM2QF5m6FTR24=</CipherValue>
+              <CipherValue>SVbyMZ8+N3YoWmlTiXBRg368UGtaOlTwbdLw1nqILIQUsLwlsHM1vdpSKoaCsZ6ffkBjjiRjh5I8uzDg8yF4pLQ+NehFaMqRqmSTpkTAL+ngapxNG3oQgccDPe8C6DHJEan8KCN4yPVEG6Yi0l4XNj4bR9hhOC40thcETE8nb4L/JZUkvPAiVX37nlmw9icbMccEQRahdR99Kc4lZrNgw8cttuLF4ScQNHHj9f2+ktM=</CipherValue>
             </CipherData>
           </EncryptedData>
         </ConnectionManager>
@@ -58,12 +58,12 @@
           DTS:ConnectionString="Data Source=devomni-dbs.database.windows.net;User ID=devomnidbuser;Initial Catalog=devOmniDW;Provider=SQLNCLI11.1;Auto Translate=False;">
           <EncryptedData
             Type="http://www.w3.org/2001/04/xmlenc#Element"
-            Salt="+3golQ6n3ME="
-            IV="h/T/JzOfeIEPqweIZQKmQQ==" xmlns="http://www.w3.org/2001/04/xmlenc#">
+            Salt="7MbcvO6pDuk="
+            IV="uqrD7bL+eK9b3nPx8qFIdg==" xmlns="http://www.w3.org/2001/04/xmlenc#">
             <EncryptionMethod
               Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
             <CipherData>
-              <CipherValue>h/T/JzOfeIEPqweIZQKmQW/pYvKxyxJcFFWClGrZBgLPJwNuGOBoKr4viN0ttqkoz6bK49wfcHTm1jecFSqL3VRuvIZXByQ9MVrAt3U6scyXoYOK+D4Pcdftw+FO21AQLR7bCLHQNd8CVeKefwZnPXfy0PnsICb631cVcFedJHtsTDCceHt5mu0XHCVlvh4t</CipherValue>
+              <CipherValue>uqrD7bL+eK9b3nPx8qFIdqooaUW2eGDP/j9BV6MkwCAh2/4vGK7oW961FmditpjJ1phokIPeWdOP1gjzmF4HLZgweewBJgwbbCvpYZxS+ASatI2lRNpKztnNMly8cRVBNmnFkVFGscPhOjIPBIidIahHriKRoOSFBmgLjKZym2luHXG0UZuwsP4lPJFzcHtL</CipherValue>
             </CipherData>
           </EncryptedData>
         </DTS:ConnectionManager>
@@ -79,12 +79,12 @@
           ConnectionString="ServiceName=Smartsheet;PathToTokenFile=;ApiThrottleRate=0;AuthenticationMode=ApiToken;InstanceType=Default;ProxyMode=NoProxy;ProxyUsername=;ProxyServer=;ProxyServerPort=0;ServiceTimeout=120;RetryOnIntermittentErrors=True;IgnoreCertificateErrors=False">
           <EncryptedData
             Type="http://www.w3.org/2001/04/xmlenc#Element"
-            Salt="L6oqTBou4RI="
-            IV="bGS3BafIbX23+uuoCmoIUg==" xmlns="http://www.w3.org/2001/04/xmlenc#">
+            Salt="rbZdPi1aTW0="
+            IV="s5maJbf68Ih0Q8HVv2Ug5Q==" xmlns="http://www.w3.org/2001/04/xmlenc#">
             <EncryptionMethod
               Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
             <CipherData>
-              <CipherValue>bGS3BafIbX23+uuoCmoIUvAmMS4tX0cpi6cSxsjfgD2216YxmWYtcWTdNjj2ZdfFwLsQg/0JGVDmqHzLKWG0k2z5sUZ3mjii9il+bKZ1GMKHpZoDLIPSMk4PUK7mOCf4eu1EpgJPB8C5h8ugdA77W4aUN22Pv/QxDQPC+Tuo/k4=</CipherValue>
+              <CipherValue>s5maJbf68Ih0Q8HVv2Ug5SvA88CFZP/esG8deaC6wFUwWMPBIQ9cFAD1qOJY823w1bZyd9MZl/S0k+dslUPCcrwY3cjpx9ye9K3zn0Oz+2k9HVyn0Yo/44cU5hqtM8puAc721pqByyrnjmmNQE2ox2IwGHKF1lNIIFVLipXIUmY=</CipherValue>
             </CipherData>
           </EncryptedData>
         </ConnectionManager>
@@ -7248,41 +7248,29 @@
         <NodeLayout
           Size="187,42"
           Id="Package\Insert Netsuite Project"
-          TopLeft="40,250.5" />
+          TopLeft="24,107.5" />
         <NodeLayout
           Size="203,42"
           Id="Package\Truncate Netsuite Project"
-          TopLeft="16,107.5" />
+          TopLeft="16,5.5" />
         <NodeLayout
           Size="224,42"
           Id="Package\Update Smartsheet (Netsuite)"
-          TopLeft="5.50000000000004,413.5" />
+          TopLeft="5.50000000000003,209.5" />
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 1]"
+          Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="117.5,149.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="16,101"
+              EndConnector="0,60"
               Start="0,0"
-              End="16,93.5">
+              End="0,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,46.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,46.5"
-                    Point2="0,50.5"
-                    Point3="4,50.5" />
-                  <mssgle:LineSegment
-                    End="12,50.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="12,50.5"
-                    Point2="16,50.5"
-                    Point3="16,54.5" />
-                  <mssgle:LineSegment
-                    End="16,93.5" />
+                    End="0,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -7292,31 +7280,19 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="133.5,292.5">
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="117.5,47.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-16,121"
+              EndConnector="0,60"
               Start="0,0"
-              End="-16,113.5">
+              End="0,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,56.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,56.5"
-                    Point2="0,60.5"
-                    Point3="-4,60.5" />
-                  <mssgle:LineSegment
-                    End="-12,60.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-12,60.5"
-                    Point2="-16,60.5"
-                    Point3="-16,64.5" />
-                  <mssgle:LineSegment
-                    End="-16,113.5" />
+                    End="0,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
